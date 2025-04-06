@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url(https://codehs.com/uploads/a83056d70b4179aeb862a0d12eab28f1) repeat;
+    color: #333;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+  }
+  .logo img {
+    height: 60px;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #FFD700; /* Cameroonian Yellow */
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 12px;
+    white-space: nowrap;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .navbar ul li a:hover {
+    background: #005f4a;
+    color: white;
+  }
+  .navbar {
+    background: #CE1126; /* Cameroonian Red */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%; /* Reduced side padding for more space */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    margin-right: 80px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 7px; /* Reduced gap to allow more items on screen */
+    flex-wrap: wrap; /* Allow wrapping if needed on smaller screens */
+    margin-right: 90px;
+    padding: 0;
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+  }
+  
+  /* Nav Links */
+  .navbar ul li a {
+    text-decoration: none;
+    color: #FFD700; /* Cameroonian Yellow */
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  .navbar ul li a:hover {
+    background: #007A5E;
+    color: white;
+  }
+  
+  /* Donate Button */
+  .donate-btn {
+    background: #007A5E;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    transition: background 0.3s;
+    white-space: nowrap; /* Ensure Donate text stays on one line */
+  }
+  
+  .donate-btn:hover {
+    background: white;
+    color: green;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('hero-image.jpg') center/cover no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #007A5E;
+    padding: 0;
+    margin-top: 70px; /* Offset for fixed navbar */
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  /* Info Section */
+  .info-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 10%;
+  }
+  
+  .info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  h3 {
+    color: #007A5E;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #007A5E;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .navbar ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .info-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

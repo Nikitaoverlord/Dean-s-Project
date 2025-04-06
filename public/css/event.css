@@ -1,0 +1,156 @@
+/* General Styles for Events Page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+  }
+  
+  /* Header & Navigation */
+  header {
+    background: #007A5E; /* Cameroonian Green */
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+  }
+  .logo img {
+    height: 60px;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #FFD700; /* Cameroonian Yellow */
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 12px;
+    white-space: nowrap;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .navbar ul li a:hover {
+    background: #005f4a;
+    color: white;
+  }
+  .donate-btn {
+    background: #CE1126;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  /* Main Content Layout */
+  .main {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  h1, h4 {
+    color: #007A5E;
+    text-align: center;
+  }
+  
+  p{
+      text-align: center;
+  }
+  
+  /* Event Card */
+  .Events {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  .Fevent {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .Fevent .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    background: #085e8a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .Fevent .date h5 {
+    margin: 5px 0;
+    font-size: 80%;
+  }
+  
+  .Fevent .date h6 {
+    margin: 5px 0;
+    font-size: 150%;
+  }
+  
+  .Fevent .description {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+    color: #333;
+  }
+  .Fevent .learnMore {
+    width: 120px;
+    text-align: center;
+  }
+  .Fevent .learnMore a.button {
+    background: #007A5E;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .Fevent .learnMore a.button:hover {
+    background: #005f4a;
+  }
+  
+  /* Footer */
+  footer {
+    background: #007A5E;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .navbar ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .info-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
