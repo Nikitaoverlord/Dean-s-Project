@@ -18,7 +18,7 @@ app.use(express.static('public'))
 
 const users = {} // a dictionary of objects with each key being the socket.id
 // var accountInfo = JSON.parse(fs.readFileSync(__dirname + '/public/data/accounts.json'))
-eventsData = JSON.parse(fs.readFileSync(__dirname + '/public/data/events.json'))
+eventsData = JSON.parse(fs.readFileSync(__dirname + '/public/data/events.JSON'))
 
 app.get(['/', '/home'], (req, res) => {
     res.sendFile(__dirname + '/public/html/home.html')
