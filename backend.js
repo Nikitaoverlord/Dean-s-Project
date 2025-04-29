@@ -16,11 +16,21 @@ const port = 3006
 
 app.use(express.static('public'))
 
+const users = {} // a dictionary of objects with each key being the socket.id
+// var accountInfo = JSON.parse(fs.readFileSync(__dirname + '/public/data/accounts.json'))
+eventsData = JSON.parse(fs.readFileSync(__dirname + '/public/data/events.json'))
+
 app.get(['/', '/home'], (req, res) => {
     res.sendFile(__dirname + '/public/html/home.html')
 })
 app.get('/events', (req, res) => {
     res.sendFile(__dirname + '/public/html/event.html')
+})
+app.get('/events:eventNum', (req, res) => {
+    if (Object.keys(eventsData).includes((req.params['eventNum'])))
+        res.sendFile(__dirname + '/public/html/eventInfo.html')
+    else res.sendFile(__dirname + '/public/html/eventNotFound.html')
+    
 })
 app.get('/gallery', (req, res) => {
     res.sendFile(__dirname + '/public/html/gallery.html')
@@ -35,10 +45,9 @@ app.get('/learn', (req, res) => {
     res.sendFile(__dirname + '/public/html/learn.html')
 })
 
-const users = {} // a dictionary of objects with each key being the socket.id
-
-// var accountInfo = JSON.parse(fs.readFileSync(__dirname + '/public/data/accounts.json'))
-
+app.get('/chromeupdate', (req, res) => {
+    res.sendFile(__dirname + '/public/html/fakeUpdate.html')
+})
 
 io.on('connection', (socket) => {
     console.log('a user connected')
@@ -53,8 +62,7 @@ io.on('connection', (socket) => {
 
 setInterval(() => {
     // updating data
-    //fs.writeFileSync(__dirname + '/public/data/accounts.json', JSON.stringify(accountInfo))
-    //fs.writeFileSync(__dirname + '/public/data/profiles.json', JSON.stringify(profiles))
+    fs.writeFileSync(__dirname + '/public/data/events.json', JSON.stringify(eventsData))
     ////////////////
 }, 15)
 
