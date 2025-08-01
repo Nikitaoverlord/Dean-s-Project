@@ -1,64 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Coding HQ empowers the next generation of Cameroonian software developers through community initiatives, workshops, and expert training.">
-  <title>Coding HQ - Empowering Developers</title>
-  <link rel="stylesheet" href="/css/home.css">
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
+<html>
+
+  <head>
+    <title>Psst... someone likes you</title>
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico?">
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+  </head>
 <body>
-  <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="#">
-          <img src="https://codehs.com/uploads/47c2b64be9493e308def054eb7ce1f35" alt="Coding HQ Logo">
-        </a>
-      </div>
-      <ul>
-        <li><a href="/home">Home</a></li>
-        <li><a href="/events">Events</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/share">Share</a></li>
-        <li><a href="/learn">Learn</a></li>
-        <li><a href="https://google.com" class="donate-btn">Donate</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Coding HQ</h1>
-      <p>Empowering the next generation of Cameroonian software developers.</p>
-    </div>
-  </section>
 
-  <!-- Main Content -->
-  <main>
-    <section class="info-container">
-      <div class="info-card">
-        <h3>About Us</h3>
-        <p>CodingHQ is a community-driven software development hub for passionate developers who want to upskill and grow in the industry through workshops, mentorship programs, and expert training.</p>
-      </div>
-      <div class="info-card">
-        <h3>Our Goals</h3>
-        <p>We aim to create an inclusive ecosystem where aspiring software developers receive the support, resources, and real-world experience they need to succeed in the tech industry.</p>
-      </div>
-      <div class="info-card">
-        <h3>Past Events</h3>
-        <p>From hackathons to bootcamps, we've hosted initiatives that help young developers gain hands-on experience and network with industry professionals.</p>
-      </div>
-    </section>
-  </main>
+        <main>
+          <audio id="loveSong" src="/music/wonderwall.mp3"></audio>
+          <div class="container">
+            <div class="header">
+                <h1>Today is National Girlfriend Day!</h1>
+            </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Coding HQ. All rights reserved.</p>
-  </footer>
-</body>
+            <div class="ultimate-question">
+              <img id="swapImage" src="imgs/nikita_inquiring.jpg" alt="">
+              <p>Will you be my girlfriend?</p>
+              <div class="question-buttons">
+                <button class="yes-button">Yes 💘</button>
+                <button class="no-button">No 😢</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery" id="gallery" style="display: none;">
+            <!-- Left Column -->
+            <div class="column column-left">
+              <div class="scroll-content">
+                <img src="/imgs/photos/1.jpg" />
+                <img src="/imgs/photos/2.jpg" />
+                <img src="/imgs/photos/3.png" />
+                <img src="/imgs/photos/4.jpg" />
+                <img src="/imgs/photos/5.jpg" />
+                <img src="/imgs/photos/6.png" />
+                <img src="/imgs/photos/19.jpg" />
+                <!-- Duplicate -->
+                <img src="/imgs/photos/1.jpg" />
+                <img src="/imgs/photos/2.jpg" />
+                <img src="/imgs/photos/3.png" />
+                <img src="/imgs/photos/4.jpg" />
+                <img src="/imgs/photos/5.jpg" />
+                <img src="/imgs/photos/6.png" />
+                <img src="/imgs/photos/19.jpg" />
+              </div>
+            </div>
+
+            <!-- Middle Column -->
+            <div class="column column-middle">
+              <div class="scroll-content">
+                <img src="/imgs/photos/7.jpg" />
+                <img src="/imgs/photos/8.jpg" />
+                <img src="/imgs/photos/9.jpg" />
+                <img src="/imgs/photos/10.png" />
+                <img src="/imgs/photos/11.png" />
+                <img src="/imgs/photos/12.jpg" />
+                <img src="/imgs/photos/20.jpg" />
+                <!-- Duplicate -->
+                <img src="/imgs/photos/7.jpg" />
+                <img src="/imgs/photos/8.jpg" />
+                <img src="/imgs/photos/9.jpg" />
+                <img src="/imgs/photos/10.png" />
+                <img src="/imgs/photos/11.png" />
+                <img src="/imgs/photos/12.jpg" />
+                <img src="/imgs/photos/20.jpg" />
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column column-right">
+              <div class="scroll-content">
+                <img src="/imgs/photos/13.jpg" />
+                <img src="/imgs/photos/14.jpg" />
+                <img src="/imgs/photos/15.jpg" />
+                <img src="/imgs/photos/16.jpg" />
+                <img src="/imgs/photos/17.jpg" />
+                <img src="/imgs/photos/18.jpg" />
+                <!-- Duplicate -->
+                <img src="/imgs/photos/13.jpg" />
+                <img src="/imgs/photos/14.jpg" />
+                <img src="/imgs/photos/15.jpg" />
+                <img src="/imgs/photos/16.jpg" />
+                <img src="/imgs/photos/17.jpg" />
+                <img src="/imgs/photos/18.jpg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="yay-message" id="yay">Yay! 🎉</div>
+          <div class="heart-container" id="heart-container"></div>
+
+          <div id="gift-popup" class="hidden">
+          <div class="gift-box">
+            <p class="gift-message">You have a gift!</p>
+            <img id="gift-img" src="/imgs/gift.png" alt="Gift" />
+            <p id="coupon-text" class="hidden">1 free coupan for special Shevyakov back massage (exchangable for 1 honeycomb Van Leeuwen ice cream)!</p>
+          </div>
+        </div>
+
+
+
+              <!-- <div class="popup" style="display: none">
+                <h2>You have a gift!</h2>
+                <img src="" alt="present gif shaking">
+                <img style="display: none" src="" alt="1 special shevyakov back massage coupan">
+              </div>
+            </div> -->
+
+
+        </main>
+
+        <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+        <script src="/js/home.js"></script>
+    </body>
 </html>
